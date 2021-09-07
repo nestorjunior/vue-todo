@@ -25,7 +25,7 @@
                     </div>
                 </div>
 
-                <button class="clear" v-on:click="tasks=[]">Limpar tudo</button>
+                <button class="clear" v-on:click="tasks=[]" v-if="tasks.length">Limpar tudo</button>
 
                 <input type="text" placeholder="Escreva uma nova tarefa..." v-model="newTask.title">
                 <button class="add" v-on:click="addTask()">Adicionar</button>
