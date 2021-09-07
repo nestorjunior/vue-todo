@@ -17,10 +17,24 @@ var tasks = [
 const todoList = {
     data() {
       return {
-        tasks: window.tasks
+        tasks: window.tasks,
+        newTask: {
+            done: false
+        }
       }
     },
-    methods: {},
+    methods: {
+        addTask: function () {
+            if (this.newTask.title) {
+                this.tasks.push(this.newTask);
+                this.newTask = {
+                    done: false
+                }
+            } else {
+                alert('Campo precisa ser preenchido!')
+            }
+        }
+    },
 }
 
 
